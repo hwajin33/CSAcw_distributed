@@ -64,7 +64,7 @@ func distributor(p Params, c distributorChannels) {
 	//server := flag.String("server","127.0.0.1" +
 	//	":8040","IP:port string to connect to as server")
 	//flag.Parse()
-	client, _ := rpc.Dial("tcp","127.0.0.1:8050")
+	client, _ := rpc.Dial("tcp","127.0.0.1:8060")
 	//panic(err)
 	defer client.Close()
 
@@ -74,15 +74,11 @@ func distributor(p Params, c distributorChannels) {
 	// TODO: Report the final state using FinalTurnCompleteEvent.
 	c.events <- FinalTurnComplete{turn, aliveCell}
 
-	//loadImage(p, c, currentWorld, turn)
-
 	// Make sure that the Io has finished any output before exiting.
 	c.ioCommand <- ioCheckIdle
 	<-c.ioIdle
 
 	c.events <- StateChange{turn, Quitting}
-
-
 
 	// Close the channel to stop the SDL goroutine gracefully. Removing may cause deadlock.
 	close(c.events)
