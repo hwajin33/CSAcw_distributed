@@ -1,6 +1,7 @@
 package gol
 
 import (
+	"flag"
 	"fmt"
 	"net/rpc"
 	"uk.ac.bris.cs/gameoflife/stubs"
@@ -38,6 +39,7 @@ func calculateAliveCells(p Params, world [][]byte) []util.Cell{
 	return aliveCells
 }
 
+var server = flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
@@ -62,16 +64,19 @@ func distributor(p Params, c distributorChannels) {
 
 	// we want all the turns to be processed on the remote node, and we want to get the result back
 	turn := p.Turns
-	//server := flag.String("server","127.0.0.1" +
-	//	":8040","IP:port string to connect to as server")
-	//flag.Parse()
-	client, _ := rpc.Dial("tcp","127.0.0.1:8060")
-	//panic(err)
+
+	//server := flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
+	flag.Parse()
+	client, _ := rpc.Dial("tcp", *server)
 	defer client.Close()
 
-	makeCall(*client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
+	//client, _ := rpc.Dial("tcp","127.0.0.1:8060")
+	////panic(err) <- this not include
+	//defer client.Close()
 
-	aliveCell := calculateAliveCells(p, currentWorld)
+	testWorld := makeCall(*client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
+
+	aliveCell := calculateAliveCells(p, testWorld)
 	// TODO: Report the final state using FinalTurnCompleteEvent.
 	c.events <- FinalTurnComplete{turn, aliveCell}
 
