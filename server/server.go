@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"flag"
+	"math/rand"
 	"net"
 	"net/rpc"
-	"os"
+	"time"
 	"uk.ac.bris.cs/gameoflife/stubs"
 )
 
@@ -105,14 +106,23 @@ func main(){
 	//flag.Parse()
 	//rand.Seed(time.Now().UnixNano())
 	// its exported methods of GameOfLifeOperations will be called remotely
-	g := new(GameOfLifeOperations)
-	rpc.Register(g)
-	rpc.HandleHTTP()
-	listener, e := net.Listen("tcp", ":8050")
-	if e != nil {
-		fmt.Println(e)
-		os.Exit(0)
-	}
+
+	pAddr := flag.String("port","8030","Port to listen on")
+	flag.Parse()
+	rand.Seed(time.Now().UnixNano())
+	rpc.Register(&GameOfLifeOperations{})
+	listener, _ := net.Listen("tcp", ":"+*pAddr)
 	defer listener.Close()
 	rpc.Accept(listener)
+
+	//g := new(GameOfLifeOperations)
+	//rpc.Register(g)
+	//rpc.HandleHTTP()
+	//listener, e := net.Listen("tcp", ":8050")
+	//if e != nil {
+	//	fmt.Println(e)
+	//	os.Exit(0)
+	//}
+	//defer listener.Close()
+	//rpc.Accept(listener)
 }

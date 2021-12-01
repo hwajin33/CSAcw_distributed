@@ -22,7 +22,8 @@ type distributorChannels struct {
 
 func calculateAliveCells(p Params, world [][]byte) []util.Cell{
 
-	aliveCells := []util.Cell{}
+	var aliveCells []util.Cell
+	//aliveCells := []util.Cell{}
 	var cell util.Cell
 
 	for y := 0; y < p.ImageHeight; y++ {
