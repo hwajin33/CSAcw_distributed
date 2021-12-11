@@ -127,10 +127,7 @@ func main(){
 	pAddr := flag.String("port","8011","Port to listen on")
 	flag.Parse()
 	rand.Seed(time.Now().UnixNano())
-	err := rpc.Register(&GameOfLifeOperations{})
-	if err != nil {
-		return 
-	}
+	rpc.Register(&GameOfLifeOperations{})
 	listener, _ := net.Listen("tcp", ":"+*pAddr)
 	defer listener.Close()
 	rpc.Accept(listener)

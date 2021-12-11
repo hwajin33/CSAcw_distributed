@@ -25,7 +25,6 @@ type distributorChannels struct {
 func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util.Cell {
 
 	var aliveCells []util.Cell
-	//aliveCells := []util.Cell{}
 	var cell util.Cell
 
 	for y := 0; y < imageHeight; y++ {
@@ -40,10 +39,6 @@ func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util
 	return aliveCells
 }
 
-//func totalAliveCells(p Params, currentWorld [][]byte) []util.Cell {
-//	var cells = calculateAliveCells(p, currentWorld)
-//}
-
 func saveImage(p Params, c distributorChannels, world [][]byte, turn int) {
 	filename := fmt.Sprintf("%vx%vx%d", p.ImageHeight, p.ImageWidth, turn)
 
@@ -56,8 +51,7 @@ func saveImage(p Params, c distributorChannels, world [][]byte, turn int) {
 	}
 }
 
-var server = flag.String("server","127.0.0.1:8011","IP:port string to connect to as server")
-
+var server = flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
@@ -113,17 +107,9 @@ func distributor(p Params, c distributorChannels) {
 			case <-done:
 				return
 			case <-ticker.C:
-				// not updating the current world
-					//mutex.Lock()
-					//aliveCells := len(calculateAliveCells(p.ImageHeight, p.ImageWidth, currentWorld))
-					currentTurn, currentAliveCells := makeCellCountCall(client)
-					//mutex.Unlock()
-					// getting the current turn and the # of live cells from the server and passing down to the event channel.
-					c.events <- AliveCellsCount{CompletedTurns: currentTurn, CellsCount: currentAliveCells}
-					//c.events <- TurnComplete{CompletedTurns: cellCountWorld.Turn}
-					//c.events <- FinalTurnComplete{CompletedTurns: turn}
-				//}
-				//tickerTurn++
+				currentTurn, currentAliveCells := makeCellCountCall(client)
+				// getting the current turn and the # of live cells from the server and passing down to the event channel.
+				c.events <- AliveCellsCount{CompletedTurns: currentTurn, CellsCount: currentAliveCells}
 			default:
 			}
 		}
@@ -134,8 +120,6 @@ func distributor(p Params, c distributorChannels) {
 
 	saveImage(p, c, currentWorld, turn)
 
-	//aliveCell := callCellCount(*client, callWorld, p.Turns, aliveCells, p.ImageHeight, p.ImageWidth)
-		//calculateAliveCells(p, callWorld)
 	// TODO: Report the final state using FinalTurnCompleteEvent.
 	c.events <- FinalTurnComplete{turn, calculateAliveCells(p.ImageHeight, p.ImageWidth, callWorld)}
 
@@ -158,13 +142,6 @@ func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, ima
 	// response needs to be a pointer to a type when request is just a type itself
 	client.Call(stubs.GameOfLife, request, response)
 	return response.World
-}
-
-func callCellCount(client rpc.Client, world [][]byte, turn int, aliveCells int, imageHeight int, imageWidth int) *stubs.Response {
-	request := stubs.Request{World: world, NumberOfTurns: turn, NumberOfAliveCells: aliveCells, HeightImage: imageHeight, WidthImage: imageWidth}
-	response := new(stubs.Response)
-	client.Call(stubs.CountAliveCells, request, response)
-	return response
 }
 
 func makeCellCountCall(client *rpc.Client) (turn int, numberOfAliveCells int) {

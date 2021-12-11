@@ -5,9 +5,10 @@ var CountAliveCells = "GameOfLifeOperations.ReportAliveCells"
 
 // Response going to have a 2D slice returning the final board state back to the local controller
 type Response struct {
-	World [][]uint8
-	AliveCells int
-	Turn int
+	World              [][]uint8
+	AliveCells         int
+	Turn               int
+	NumberOfAliveCells int
 }
 
 type TurnResponse struct {
