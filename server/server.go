@@ -124,7 +124,7 @@ func (s *GameOfLifeOperations) ReportAliveCells(req stubs.CellCountRequest, res 
 }
 
 func main(){
-	pAddr := flag.String("port","8011","Port to listen on")
+	pAddr := flag.String("port","8010","Port to listen on")
 	flag.Parse()
 	rand.Seed(time.Now().UnixNano())
 	rpc.Register(&GameOfLifeOperations{})
