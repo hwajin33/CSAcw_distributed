@@ -51,7 +51,7 @@ func saveImage(p Params, c distributorChannels, world [][]byte, turn int) {
 	}
 }
 
-var server = flag.String("server","54.197.24.249:8020","IP:port string to connect to as server")
+var server = flag.String("server","54.197.24.249:8091","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
