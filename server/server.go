@@ -14,7 +14,7 @@ import (
 var getTurn int
 var getWorld [][]byte
 var mutex = new(sync.Mutex)
-var aliveCells []util.Cell
+//var aliveCells []util.Cell
 
 const alive = 255
 const dead = 0
@@ -94,19 +94,19 @@ func (s *GameOfLifeOperations) ProcessTurns(req stubs.Request, res *stubs.Respon
 	// at the end returned by the Response pointer
 	mutex.Lock()
 	getWorld = req.World
-	aliveCells = req.AliveCells
+	//aliveCells = req.AliveCells
 	getTurn = req.Turns
 	mutex.Unlock()
 	for getTurn < req.NumberOfTurns {
 		mutex.Lock()
 		getWorld = calculateNextState(req.HeightImage, req.WidthImage, getWorld)
-		aliveCells = calculateAliveCells(req.HeightImage, req.WidthImage, getWorld)
+		//aliveCells = calculateAliveCells(req.HeightImage, req.WidthImage, getWorld)
 		getTurn++
 		mutex.Unlock()
 	}
 	mutex.Lock()
 	res.World = getWorld
-	res.AliveCells = aliveCells
+	//res.AliveCells = aliveCells
 	res.Turn = getTurn
 	mutex.Unlock()
 	return

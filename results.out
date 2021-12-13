@@ -1,0 +1,988 @@
+false
+goos: darwin
+goarch: arm64
+pkg: uk.ac.bris.cs/gameoflife
+BenchmarkGol/512x512x1000-1-8         	       1	5144765834 ns/op
+BenchmarkGol/512x512x1000-1-8         	       1	5144218500 ns/op
+BenchmarkGol/512x512x1000-1-8         	       1	5157796792 ns/op
+BenchmarkGol/512x512x1000-1-8         	       1	5166061500 ns/op
+BenchmarkGol/512x512x1000-1-8         	       1	5210189875 ns/op
+BenchmarkGol/512x512x1000-2-8         	       1	5149490000 ns/op
+BenchmarkGol/512x512x1000-2-8         	       1	5149974459 ns/op
+BenchmarkGol/512x512x1000-2-8         	       1	5149324292 ns/op
+BenchmarkGol/512x512x1000-2-8         	       1	5170100583 ns/op
+BenchmarkGol/512x512x1000-2-8         	       1	5149374833 ns/op
+BenchmarkGol/512x512x1000-3-8         	       1	5150145834 ns/op
+BenchmarkGol/512x512x1000-3-8         	       1	5153322583 ns/op
+BenchmarkGol/512x512x1000-3-8         	       1	5257465458 ns/op
+BenchmarkGol/512x512x1000-3-8         	       1	5275776583 ns/op
+BenchmarkGol/512x512x1000-3-8         	       1	5200912917 ns/op
+BenchmarkGol/512x512x1000-4-8         	       1	5246587958 ns/op
+BenchmarkGol/512x512x1000-4-8         	       1	5182310833 ns/op
+BenchmarkGol/512x512x1000-4-8         	       1	5143808333 ns/op
+BenchmarkGol/512x512x1000-4-8         	       1	5175686917 ns/op
+BenchmarkGol/512x512x1000-4-8         	       1	5151745667 ns/op
+BenchmarkGol/512x512x1000-5-8         	       1	5149787917 ns/op
+BenchmarkGol/512x512x1000-5-8         	       1	5155528750 ns/op
+BenchmarkGol/512x512x1000-5-8         	       1	5152762125 ns/op
+BenchmarkGol/512x512x1000-5-8         	       1	5156753416 ns/op
+BenchmarkGol/512x512x1000-5-8         	       1	5153210250 ns/op
+BenchmarkGol/512x512x1000-6-8         	       1	5163495041 ns/op
+BenchmarkGol/512x512x1000-6-8         	       1	5179420208 ns/op
+BenchmarkGol/512x512x1000-6-8         	       1	5169958375 ns/op
+BenchmarkGol/512x512x1000-6-8         	       1	5156652667 ns/op
+BenchmarkGol/512x512x1000-6-8         	       1	5155509500 ns/op
+BenchmarkGol/512x512x1000-7-8         	       1	5154151875 ns/op
+BenchmarkGol/512x512x1000-7-8         	       1	5156060917 ns/op
+BenchmarkGol/512x512x1000-7-8         	       1	5154111708 ns/op
+BenchmarkGol/512x512x1000-7-8         	       1	5213459792 ns/op
+BenchmarkGol/512x512x1000-7-8         	       1	5157972208 ns/op
+BenchmarkGol/512x512x1000-8-8         	       1	5157523292 ns/op
+BenchmarkGol/512x512x1000-8-8         	       1	5278338542 ns/op
+BenchmarkGol/512x512x1000-8-8         	       1	5277616292 ns/op
+BenchmarkGol/512x512x1000-8-8         	       1	5179718792 ns/op
+BenchmarkGol/512x512x1000-8-8         	       1	5153226083 ns/op
+BenchmarkGol/512x512x1000-9-8         	       1	5148307333 ns/op
+BenchmarkGol/512x512x1000-9-8         	       1	5163376000 ns/op
+BenchmarkGol/512x512x1000-9-8         	       1	5167543042 ns/op
+BenchmarkGol/512x512x1000-9-8         	       1	5151348500 ns/op
+BenchmarkGol/512x512x1000-9-8         	       1	5149717959 ns/op
+BenchmarkGol/512x512x1000-10-8        	       1	5149585750 ns/op
+BenchmarkGol/512x512x1000-10-8        	       1	5154668875 ns/op
+BenchmarkGol/512x512x1000-10-8        	       1	5175977916 ns/op
+BenchmarkGol/512x512x1000-10-8        	       1	5241912917 ns/op
+BenchmarkGol/512x512x1000-10-8        	       1	6025498833 ns/op
+BenchmarkGol/512x512x1000-11-8        	       1	5148623042 ns/op
+BenchmarkGol/512x512x1000-11-8        	       1	5473497375 ns/op
+BenchmarkGol/512x512x1000-11-8        	       1	5159364000 ns/op
+BenchmarkGol/512x512x1000-11-8        	       1	5163318542 ns/op
+BenchmarkGol/512x512x1000-11-8        	       1	5180731541 ns/op
+BenchmarkGol/512x512x1000-12-8        	       1	5164367375 ns/op
+BenchmarkGol/512x512x1000-12-8        	       1	5157993917 ns/op
+BenchmarkGol/512x512x1000-12-8        	       1	5162172667 ns/op
+BenchmarkGol/512x512x1000-12-8        	       1	5154790542 ns/op
+BenchmarkGol/512x512x1000-12-8        	       1	5154890000 ns/op
+BenchmarkGol/512x512x1000-13-8        	       1	5153713125 ns/op
+BenchmarkGol/512x512x1000-13-8        	       1	5159624958 ns/op
+BenchmarkGol/512x512x1000-13-8        	       1	5173275750 ns/op
+BenchmarkGol/512x512x1000-13-8        	SIGQUIT: quit
+PC=0x185734dd4 m=0 sigcode=0
+signal arrived during cgo execution
+
+goroutine 1 [syscall, locked to thread]:
+runtime.cgocall(0x100a9a4c8, 0x1400004fda8)
+	/usr/local/go/src/runtime/cgocall.go:156 +0x50 fp=0x1400004fd70 sp=0x1400004fd30 pc=0x1008cc900
+github.com/veandco/go-sdl2/sdl._Cfunc_PollEvent()
+	_cgo_gotypes.go:2030 +0x44 fp=0x1400004fda0 sp=0x1400004fd70 pc=0x100a8d5d4
+github.com/veandco/go-sdl2/sdl.PollEvent()
+	/Users/hwajinkang/go/pkg/mod/github.com/veandco/go-sdl2@v0.4.4/sdl/events.go:1003 +0x20 fp=0x1400004fdd0 sp=0x1400004fda0 pc=0x100a8e810
+uk.ac.bris.cs/gameoflife/sdl.(*Window).PollEvent(...)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/sdl/window.go:67
+uk.ac.bris.cs/gameoflife.TestMain(0x14000208100)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/sdl_test.go:52 +0x2c8 fp=0x1400004feb0 sp=0x1400004fdd0 pc=0x100a97a78
+main.main()
+	_testmain.go:55 +0x180 fp=0x1400004ff70 sp=0x1400004feb0 pc=0x100a98990
+runtime.main()
+	/usr/local/go/src/runtime/proc.go:255 +0x284 fp=0x1400004ffd0 sp=0x1400004ff70 pc=0x100902fc4
+runtime.goexit()
+	/usr/local/go/src/runtime/asm_arm64.s:1133 +0x4 fp=0x1400004ffd0 sp=0x1400004ffd0 pc=0x100934f04
+
+goroutine 3 [chan receive, 10 minutes]:
+testing.(*B).run1(0x140000cc900)
+	/usr/local/go/src/testing/benchmark.go:234 +0x7c
+testing.(*B).Run(0x140000cd440, {0x100aac560, 0xc}, 0x100b5a790)
+	/usr/local/go/src/testing/benchmark.go:670 +0x3d0
+testing.runBenchmarks.func1(0x140000cd440)
+	/usr/local/go/src/testing/benchmark.go:544 +0x80
+testing.(*B).runN(0x140000cd440, 0x1)
+	/usr/local/go/src/testing/benchmark.go:192 +0x140
+testing.runBenchmarks({0x100ab0cb5, 0x18}, 0x140000ae6c0, {0x100cb4d20, 0x1, 0x1})
+	/usr/local/go/src/testing/benchmark.go:553 +0x3bc
+testing.(*M).Run(0x14000208100)
+	/usr/local/go/src/testing/testing.go:1510 +0x6c8
+uk.ac.bris.cs/gameoflife.TestMain.func1(0x14000208100, 0x140000241e0)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/sdl_test.go:28 +0x28
+created by uk.ac.bris.cs/gameoflife.TestMain
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/sdl_test.go:27 +0x18c
+
+goroutine 4 [chan receive]:
+testing.(*B).run1(0x140000cd200)
+	/usr/local/go/src/testing/benchmark.go:234 +0x7c
+testing.(*benchContext).processBench(0x140000ae6d8, 0x140000ccfc0)
+	/usr/local/go/src/testing/benchmark.go:581 +0x320
+testing.(*B).run(0x140000ccfc0)
+	/usr/local/go/src/testing/benchmark.go:275 +0x74
+testing.(*B).Run(0x140000cc900, {0x140000a0310, 0xf}, 0x14000198360)
+	/usr/local/go/src/testing/benchmark.go:671 +0x3e4
+uk.ac.bris.cs/gameoflife.BenchmarkGol(0x140000cc900)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/benchmark_test.go:22 +0x14c
+testing.(*B).runN(0x140000cc900, 0x1)
+	/usr/local/go/src/testing/benchmark.go:192 +0x140
+testing.(*B).run1.func1(0x140000cc900)
+	/usr/local/go/src/testing/benchmark.go:232 +0x54
+created by testing.(*B).run1
+	/usr/local/go/src/testing/benchmark.go:225 +0x68
+
+goroutine 315 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x14000172000, 0x140001722a0, 0x14000172300, 0x140001723c0, 0x14000172360})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 259 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x140001744e0, 0x14000174a20, 0x14000174a80, 0x14000174b40, 0x14000174ae0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 28 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000b6180, 0x140000b61e0, 0x140000b6240, 0x140000b6300, 0x140000b62a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 508 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x1400014e1e0, 0x1400014e240, 0x1400014e2a0, 0x1400014e360, 0x1400014e300})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 83 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000b6360, 0x140000b63c0, 0x140000b6420, 0x140000b64e0, 0x140000b6480})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 36 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000b6780, 0x140000b67e0, 0x140000b6840, 0x140000b6900, 0x140000b68a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 30 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000b65a0, 0x140000b6600, 0x140000b6660, 0x140000b6720, 0x140000b66c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 109 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x14000024a20, 0x14000024ea0, 0x14000024f00, 0x14000024fc0, 0x14000024f60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 73 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x14000024300, 0x14000024360, 0x140000243c0, 0x14000024480, 0x14000024420})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 75 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000b6540, 0x140000b6960, 0x140000b69c0, 0x140000b6a80, 0x140000b6a20})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 39 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000b6b40, 0x140000b6ba0, 0x140000b6c00, 0x140000b6cc0, 0x140000b6c60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 59 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000244e0, 0x14000024540, 0x140000245a0, 0x14000024660, 0x14000024600})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 111 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x14000025020, 0x14000025080, 0x140000250e0, 0x140000251a0, 0x14000025140})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 32 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000246c0, 0x14000024720, 0x14000024780, 0x14000024840, 0x140000247e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 43 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x14000024c60, 0x14000024cc0, 0x14000024d20, 0x14000024de0, 0x14000024d80})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 115 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x1, 0x200, 0x200}, {0x140000242a0, 0x140000248a0, 0x14000024900, 0x140000249c0, 0x14000024960})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 101 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x140000b6120, 0x140000b6d20, 0x140000b6d80, 0x140000b6e40, 0x140000b6de0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 41 [chan receive, 10 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x140000b60c0, 0x140000b6ea0, 0x140000b6f00, 0x140000b6fc0, 0x140000b6f60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 48 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x140000b7620, 0x140000b7aa0, 0x140000b7b00, 0x140000b7bc0, 0x140000b7b60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 119 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x14000024a80, 0x14000024ae0, 0x14000024b40, 0x14000024c00, 0x14000024ba0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 151 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x140000b7080, 0x140000b7320, 0x140000b7380, 0x140000b7440, 0x140000b73e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 45 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x140000b7020, 0x140000b72c0, 0x140000b7500, 0x140000b75c0, 0x140000b7560})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 414 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x140001731a0, 0x14000173200, 0x14000173260, 0x14000173320, 0x140001732c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 113 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x140000b70e0, 0x140000b7140, 0x140000b71a0, 0x140000b7260, 0x140000b7200})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 138 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x140000b7680, 0x140000b76e0, 0x140000b7740, 0x140000b7800, 0x140000b77a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 16 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x14000024240, 0x14000025b00, 0x14000025b60, 0x14000025c20, 0x14000025bc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 149 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x14000024e40, 0x14000025200, 0x14000025260, 0x14000025320, 0x140000252c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 156 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x2, 0x200, 0x200}, {0x14000025380, 0x140000253e0, 0x14000025440, 0x14000025500, 0x140000254a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 158 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x14000025560, 0x140000255c0, 0x14000025620, 0x140000256e0, 0x14000025680})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 166 [chan receive, 9 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x14000025740, 0x140000257a0, 0x14000025800, 0x140000258c0, 0x14000025860})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 261 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000174c00, 0x14000174c60, 0x14000174cc0, 0x14000174d80, 0x14000174d20})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 403 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x14000172420, 0x14000172480, 0x140001724e0, 0x140001725a0, 0x14000172540})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 123 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x140000b7860, 0x140000b78c0, 0x140000b7920, 0x140000b79e0, 0x140000b7980})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 160 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x14000025920, 0x14000025980, 0x140000259e0, 0x14000025aa0, 0x14000025a40})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 194 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x140000b7c20, 0x140000b7c80, 0x140000b7ce0, 0x140000b7da0, 0x140000b7d40})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 193 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000174420, 0x14000174480, 0x14000174540, 0x14000174600, 0x140001745a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 96 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000025f20, 0x14000025f80, 0x140000b6ae0, 0x140000b7e00, 0x140000b74a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 182 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x3, 0x200, 0x200}, {0x140000b7a40, 0x140000b7e60, 0x140000b7ec0, 0x140000b7f80, 0x140000b7f20})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 186 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000025d40, 0x14000025da0, 0x14000025e00, 0x14000025ec0, 0x14000025e60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 229 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x140001740c0, 0x14000174660, 0x140001746c0, 0x14000174780, 0x14000174720})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 144 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000174060, 0x14000174120, 0x14000174180, 0x14000174240, 0x140001741e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 188 [chan receive, 8 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000174000, 0x140001742a0, 0x14000174300, 0x140001743c0, 0x14000174360})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 332 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x140002b36e0, 0x140002b3740, 0x140002b37a0, 0x140002b3860, 0x140002b3800})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 243 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x14000174840, 0x140001748a0, 0x14000174900, 0x140001749c0, 0x14000174960})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 173 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x14000175140, 0x140001751a0, 0x14000175200, 0x140001752c0, 0x14000175260})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 342 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x140002b2ba0, 0x140002b2c00, 0x140002b2c60, 0x140002b2d20, 0x140002b2cc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 391 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x140002b3620, 0x140002b3aa0, 0x140002b3e60, 0x140002b3f20, 0x140002b3ec0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 265 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x4, 0x200, 0x200}, {0x140001747e0, 0x14000174de0, 0x14000174e40, 0x14000174f00, 0x14000174ea0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 327 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x140002b31a0, 0x140002b3200, 0x140002b3260, 0x140002b3320, 0x140002b32c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 202 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x140002b20c0, 0x140002b2120, 0x140002b2180, 0x140002b2240, 0x140002b21e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 239 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x14000025ce0, 0x14000174ba0, 0x14000174f60, 0x14000175020, 0x14000174fc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 272 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x140002b26c0, 0x140002b2720, 0x140002b2780, 0x140002b2840, 0x140002b27e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 354 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x14000175aa0, 0x14000175b00, 0x14000175b60, 0x14000175c20, 0x14000175bc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 207 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x140001750e0, 0x14000175380, 0x140001753e0, 0x140001754a0, 0x14000175440})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 270 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x140002b2000, 0x140002b22a0, 0x140002b2300, 0x140002b23c0, 0x140002b2360})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 371 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x14000175860, 0x140002b3140, 0x140002b3500, 0x140002b35c0, 0x140002b3560})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 291 [chan receive, 7 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x140002b2420, 0x140002b2480, 0x140002b24e0, 0x140002b25a0, 0x140002b2540})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 323 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x140002b2660, 0x140002b2900, 0x140002b2960, 0x140002b2a20, 0x140002b29c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 208 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x14000025c80, 0x140002b2060, 0x140002b2600, 0x140002b2a80, 0x140002b28a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 280 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x140001758c0, 0x14000175920, 0x14000175980, 0x14000175a40, 0x140001759e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 295 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x14000175080, 0x14000175320, 0x14000175500, 0x140001755c0, 0x14000175560})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 297 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x5, 0x200, 0x200}, {0x14000175620, 0x14000175680, 0x140001756e0, 0x140001757a0, 0x14000175740})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 361 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x140001720c0, 0x14000172120, 0x14000172180, 0x14000172240, 0x140001721e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 377 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x140001727e0, 0x14000172840, 0x140001728a0, 0x14000172960, 0x14000172900})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 364 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x140002b38c0, 0x140002b3b00, 0x140002b3b60, 0x140002b3c20, 0x140002b3bc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 359 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x140002b2d80, 0x140002b3380, 0x140002b33e0, 0x140002b34a0, 0x140002b3440})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 299 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x14000175ce0, 0x14000175d40, 0x14000175da0, 0x14000175e60, 0x14000175e00})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 692 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x1400047e7e0, 0x1400047e840, 0x1400047e8a0, 0x1400047e960, 0x1400047e900})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 301 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x14000175ec0, 0x14000175f20, 0x14000175f80, 0x140002b2b40, 0x140002b2ae0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 247 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x140002b2e40, 0x140002b2ea0, 0x140002b2f00, 0x140002b2fc0, 0x140002b2f60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 350 [chan receive, 6 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x6, 0x200, 0x200}, {0x14000175c80, 0x140002b2de0, 0x140002b3020, 0x140002b30e0, 0x140002b3080})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 225 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x140002903c0, 0x14000290420, 0x14000290480, 0x14000290540, 0x140002904e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 303 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x140002b3680, 0x140002b3920, 0x140002b3980, 0x140002b3a40, 0x140002b39e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 389 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x14000172a20, 0x14000172a80, 0x14000172ae0, 0x14000172ba0, 0x14000172b40})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 368 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x14000172600, 0x14000172660, 0x140001726c0, 0x14000172780, 0x14000172720})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 535 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x1400014e5a0, 0x1400014e600, 0x1400014e660, 0x1400014e720, 0x1400014e6c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 420 [chan receive, 5 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x7, 0x200, 0x200}, {0x140002b3c80, 0x140002b3ce0, 0x140002b3d40, 0x140002b3e00, 0x140002b3da0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 382 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x14000172060, 0x14000172c00, 0x14000172c60, 0x14000172d20, 0x14000172cc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 425 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x14000172d80, 0x14000172de0, 0x14000172e40, 0x14000172f00, 0x14000172ea0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 435 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x140002900c0, 0x14000290120, 0x14000290180, 0x14000290240, 0x140002901e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 499 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x140002908a0, 0x14000290900, 0x14000290960, 0x14000290a20, 0x140002909c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 305 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x14000175800, 0x14000172f60, 0x14000172fc0, 0x14000173080, 0x14000173020})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 417 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x14000290000, 0x14000290060, 0x140002902a0, 0x14000290360, 0x14000290300})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 399 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x140001739e0, 0x1400014e000, 0x1400014e060, 0x1400014e120, 0x1400014e0c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 429 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x8, 0x200, 0x200}, {0x14000173140, 0x140001733e0, 0x14000173440, 0x14000173500, 0x140001734a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 455 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x140002b3f80, 0x14000290f60, 0x14000290fc0, 0x14000291080, 0x14000291020})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 249 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000290660, 0x140002906c0, 0x14000290720, 0x140002907e0, 0x14000290780})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 504 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000290d80, 0x14000290de0, 0x14000290e40, 0x14000290f00, 0x14000290ea0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 467 [chan receive, 4 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x140001729c0, 0x140001730e0, 0x14000173380, 0x140001735c0, 0x14000173560})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 463 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x1400014e7e0, 0x1400014e840, 0x1400014e8a0, 0x1400014e960, 0x1400014e900})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 541 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x14000291740, 0x140002917a0, 0x14000291800, 0x140002918c0, 0x14000291860})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 431 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000173620, 0x14000173680, 0x140001736e0, 0x140001737a0, 0x14000173740})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 515 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000290a80, 0x14000290ae0, 0x14000290b40, 0x14000290c00, 0x14000290ba0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 520 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000173aa0, 0x14000173b00, 0x14000173b60, 0x14000173c20, 0x14000173bc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 608 [chan receive]:
+uk.ac.bris.cs/gameoflife.BenchmarkGol.func1(0x140000cd200)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/benchmark_test.go:26 +0xf8
+testing.(*B).runN(0x140000cd200, 0x1)
+	/usr/local/go/src/testing/benchmark.go:192 +0x140
+testing.(*B).run1.func1(0x140000cd200)
+	/usr/local/go/src/testing/benchmark.go:232 +0x54
+created by testing.(*B).run1
+	/usr/local/go/src/testing/benchmark.go:225 +0x68
+
+goroutine 511 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x14000291140, 0x140002913e0, 0x14000291440, 0x14000291500, 0x140002914a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 485 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000173800, 0x14000173860, 0x140001738c0, 0x14000173980, 0x14000173920})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 448 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000290600, 0x14000290840, 0x14000290c60, 0x14000290d20, 0x14000290cc0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 522 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0x9, 0x200, 0x200}, {0x14000173a40, 0x14000173ce0, 0x14000173d40, 0x14000173e00, 0x14000173da0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 524 [chan receive, 3 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x14000173c80, 0x14000173ec0, 0x14000173f20, 0x140002905a0, 0x14000173f80})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 529 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x140002911a0, 0x14000291200, 0x14000291260, 0x14000291320, 0x140002912c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 547 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x1400014e3c0, 0x1400014e420, 0x1400014e480, 0x1400014e540, 0x1400014e4e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 476 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xa, 0x200, 0x200}, {0x14000291380, 0x140002915c0, 0x14000291620, 0x140002916e0, 0x14000291680})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 545 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x140002910e0, 0x14000291560, 0x14000291920, 0x140002919e0, 0x14000291980})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 594 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x1400014ea20, 0x1400014ea80, 0x1400014eae0, 0x1400014eba0, 0x1400014eb40})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 568 [chan receive, 2 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x14000291a40, 0x14000291aa0, 0x14000291b00, 0x14000291bc0, 0x14000291b60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 581 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x14000291ce0, 0x14000291d40, 0x14000291da0, 0x14000291e60, 0x14000291e00})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 666 [IO wait]:
+internal/poll.runtime_pollWait(0x12def1040, 0x72)
+	/usr/local/go/src/runtime/netpoll.go:229 +0xa4
+internal/poll.(*pollDesc).wait(0x14000208198, 0x72, 0x0)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:84 +0x38
+internal/poll.(*pollDesc).waitRead(...)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x14000208180, {0x1400036d000, 0x1000, 0x1000})
+	/usr/local/go/src/internal/poll/fd_unix.go:167 +0x1dc
+net.(*netFD).Read(0x14000208180, {0x1400036d000, 0x1000, 0x1000})
+	/usr/local/go/src/net/fd_posix.go:56 +0x44
+net.(*conn).Read(0x140002a4000, {0x1400036d000, 0x1000, 0x1000})
+	/usr/local/go/src/net/net.go:183 +0x4c
+bufio.(*Reader).Read(0x1400007de60, {0x140000a0040, 0x1, 0x9})
+	/usr/local/go/src/bufio/bufio.go:227 +0x20c
+io.ReadAtLeast({0x100b5c0e0, 0x1400007de60}, {0x140000a0040, 0x1, 0x9}, 0x1)
+	/usr/local/go/src/io/io.go:328 +0xa0
+io.ReadFull(...)
+	/usr/local/go/src/io/io.go:347
+encoding/gob.decodeUintReader({0x100b5c0e0, 0x1400007de60}, {0x140000a0040, 0x9, 0x9})
+	/usr/local/go/src/encoding/gob/decode.go:120 +0x54
+encoding/gob.(*Decoder).recvMessage(0x14000208200)
+	/usr/local/go/src/encoding/gob/decoder.go:81 +0x4c
+encoding/gob.(*Decoder).decodeTypeSequence(0x14000208200, 0x0)
+	/usr/local/go/src/encoding/gob/decoder.go:143 +0x40
+encoding/gob.(*Decoder).DecodeValue(0x14000208200, {0x100b0a1a0, 0x14000098360, 0x16})
+	/usr/local/go/src/encoding/gob/decoder.go:214 +0x1a0
+encoding/gob.(*Decoder).Decode(0x14000208200, {0x100b0a1a0, 0x14000098360})
+	/usr/local/go/src/encoding/gob/decoder.go:191 +0x1a4
+net/rpc.(*gobClientCodec).ReadResponseHeader(0x140001122a0, 0x14000098360)
+	/usr/local/go/src/net/rpc/client.go:228 +0x40
+net/rpc.(*Client).input(0x14000424060)
+	/usr/local/go/src/net/rpc/client.go:109 +0xa8
+created by net/rpc.NewClientWithCodec
+	/usr/local/go/src/net/rpc/client.go:206 +0xa0
+
+goroutine 644 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014e180, 0x1400014f500, 0x1400014f560, 0x1400014f620, 0x1400014f5c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 585 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x1400014e780, 0x1400014e9c0, 0x1400014ec00, 0x1400014ecc0, 0x1400014ec60})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 587 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x1400014ede0, 0x1400014ee40, 0x1400014eea0, 0x1400014ef60, 0x1400014ef00})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 633 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014f680, 0x1400014fce0, 0x1400014fd40, 0x1400014fe00, 0x1400014fda0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 590 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x14000291c20, 0x14000291c80, 0x14000291ec0, 0x14000291f80, 0x14000291f20})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 630 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014f6e0, 0x1400014f920, 0x1400014f980, 0x1400014fa40, 0x1400014f9e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 592 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x1400014ed80, 0x1400014efc0, 0x1400014f080, 0x1400014f140, 0x1400014f0e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 626 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xb, 0x200, 0x200}, {0x1400014ed20, 0x1400014f1a0, 0x1400014f200, 0x1400014f2c0, 0x1400014f260})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 572 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014faa0, 0x1400014fec0, 0x1400014ff20, 0x140002b0000, 0x1400014ff80})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 628 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014f020, 0x1400014f380, 0x1400014f3e0, 0x1400014f4a0, 0x1400014f440})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 489 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014f740, 0x1400014f7a0, 0x1400014f800, 0x1400014f8c0, 0x1400014f860})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 662 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x140002b04e0, 0x140002b0540, 0x140002b05a0, 0x140002b0660, 0x140002b0600})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 493 [chan receive, 1 minutes]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400014fb00, 0x1400014fb60, 0x1400014fbc0, 0x1400014fc80, 0x1400014fc20})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 575 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x1400047e360, 0x1400047e3c0, 0x1400047e420, 0x1400047e4e0, 0x1400047e480})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 635 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x140002b0060, 0x140002b00c0, 0x140002b0120, 0x140002b01e0, 0x140002b0180})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 637 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x1400047e0c0, 0x1400047e120, 0x1400047e180, 0x1400047e240, 0x1400047e1e0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 639 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xc, 0x200, 0x200}, {0x140002b0240, 0x140002b02a0, 0x140002b0300, 0x140002b03c0, 0x140002b0360})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 495 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x1400014fe60, 0x1400047e000, 0x1400047e060, 0x1400047e300, 0x1400047e2a0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 677 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x1400047e540, 0x1400047e5a0, 0x1400047e600, 0x1400047e6c0, 0x1400047e660})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 679 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x140002b0420, 0x140002b0480, 0x140002b06c0, 0x140002b0780, 0x140002b0720})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 496 [chan receive]:
+net/rpc.(*Client).Call(...)
+	/usr/local/go/src/net/rpc/client.go:321
+uk.ac.bris.cs/gameoflife/gol.makeCall(0x14000424060, {0x14000641000, 0x200, 0x200}, 0x3e8, 0x200, 0x200)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/distributor.go:145 +0x15c
+uk.ac.bris.cs/gameoflife/gol.distributor({0x3e8, 0xd, 0x200, 0x200}, {0x140002b0840, 0x140002b08a0, 0x140002b0900, 0x140002b0960, 0x140002b0a20, 0x140002b09c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/distributor.go:119 +0x294
+uk.ac.bris.cs/gameoflife/gol.Run({0x3e8, 0xd, 0x200, 0x200}, 0x140002b0840, 0x0)
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:40 +0x1a8
+created by uk.ac.bris.cs/gameoflife.BenchmarkGol.func1
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/benchmark_test.go:25 +0xcc
+
+goroutine 497 [chan receive]:
+uk.ac.bris.cs/gameoflife/gol.startIo({0x3e8, 0xd, 0x200, 0x200}, {0x140002b08a0, 0x140002b0900, 0x140002b0960, 0x140002b0a20, 0x140002b09c0})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/io.go:138 +0x80
+created by uk.ac.bris.cs/gameoflife/gol.Run
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/gol.go:30 +0x12c
+
+goroutine 667 [runnable]:
+uk.ac.bris.cs/gameoflife/gol.distributor.func1(0x1400014f320, 0x14000424060, 0x3e8, {0x3e8, 0xd, 0x200, 0x200}, {0x140002b0840, 0x140002b08a0, 0x140002b0900, ...})
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/distributor.go:102 +0x78
+created by uk.ac.bris.cs/gameoflife/gol.distributor
+	/Users/hwajinkang/Desktop/CSA_distributed/dis/CSAcw_distributed/gol/distributor.go:99 +0x24c
+
+r0      0x10004003
+r1      0x7000906
+r2      0x0
+r3      0xc00
+r4      0x1f03
+r5      0x0
+r6      0x0
+r7      0x14ce20ce0
+r8      0xfffffbbf
+r9      0x7000906
+r10     0x880000008802
+r11     0xfffffffd
+r12     0x10000000000
+r13     0x8800
+r14     0x880000000000
+r15     0x0
+r16     0xffffffffffffffe1
+r17     0x1f0cd0778
+r18     0x158033940
+r19     0x0
+r20     0x0
+r21     0x1f03
+r22     0xc00
+r23     0x16f535d90
+r24     0x7000906
+r25     0x0
+r26     0x7000906
+r27     0x1f03
+r28     0x16f535d18
+r29     0x16f535c20
+lr      0x185735184
+sp      0x16f535bd0
+pc      0x185734dd4
+fault   0x185734dd4
+*** Test killed with quit: ran too long (11m0s).
+exit status 2
+FAIL	uk.ac.bris.cs/gameoflife	660.019s
