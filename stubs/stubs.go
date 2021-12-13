@@ -1,12 +1,14 @@
 package stubs
 
+import "uk.ac.bris.cs/gameoflife/util"
+
 var GameOfLife = "GameOfLifeOperations.ProcessTurns"
 var CountAliveCells = "GameOfLifeOperations.ReportAliveCells"
 
 // Response going to have a 2D slice returning the final board state back to the local controller
 type Response struct {
 	World              [][]uint8
-	AliveCells         int
+	AliveCells         []util.Cell
 	Turn               int
 	NumberOfAliveCells int
 }
@@ -25,7 +27,9 @@ type CellCountResponse struct {
 type Request struct {
 	World [][]uint8
 	NumberOfTurns int
+	Turns int
 	NumberOfAliveCells int
+	AliveCells []util.Cell
 	HeightImage int
 	WidthImage int
 }

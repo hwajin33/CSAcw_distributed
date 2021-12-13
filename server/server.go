@@ -15,7 +15,7 @@ var getTurn int
 var getWorld [][]byte
 var mutex = new(sync.Mutex)
 //var cell util.Cell
-//var aliveCells []util.Cell
+var aliveCells []util.Cell
 //var nextWorld [][]uint8
 
 const alive = 255
@@ -69,16 +69,16 @@ func calculateNextState(imageHeight int, imageWidth int, currentTurnWorld [][]by
 func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util.Cell{
 	// Prob.: had problems sending a new slice for every alive cells calculated, it was previously appending the new cell slices
 	// to the cell slices it had before.
-	var alive []util.Cell
+	var cellAlive []util.Cell
 
 	for y := 0; y < imageHeight; y++ {
 		for x := 0; x < imageWidth; x++ {
 			if world[y][x] == 255 {
-				alive = append(alive, util.Cell{X: x, Y: y})
+				cellAlive = append(cellAlive, util.Cell{X: x, Y: y})
 			}
 		}
 	}
-	return alive
+	return cellAlive
 }
 
 
@@ -95,20 +95,23 @@ type GameOfLifeOperations struct {}
 func (s *GameOfLifeOperations) ProcessTurns(req stubs.Request, res *stubs.Response) (err error) {
 	// have a for loop that iterates over the # of iterations specified in the Request struct
 	// at the end returned by the Response pointer
-	//turn := getTurn
 	mutex.Lock()
 	getWorld = req.World
+	aliveCells = req.AliveCells
+	getTurn = req.Turns
 	mutex.Unlock()
 	for getTurn < req.NumberOfTurns {
 		mutex.Lock()
 		getWorld = calculateNextState(req.HeightImage, req.WidthImage, getWorld)
+		aliveCells = calculateAliveCells(req.HeightImage, req.WidthImage, getWorld)
 		getTurn++
 		mutex.Unlock()
 	}
 	//getTurn = turn
 	mutex.Lock()
 	res.World = getWorld
-	//getWorld = res.World
+	res.AliveCells = aliveCells
+	res.Turn = getTurn
 	mutex.Unlock()
 	return
 }

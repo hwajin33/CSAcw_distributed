@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"net/rpc"
-	"sync"
 	"time"
 	"uk.ac.bris.cs/gameoflife/stubs"
 
@@ -23,21 +22,19 @@ type distributorChannels struct {
 	ioInput    <-chan uint8
 }
 
-func calculateAliveCells(p Params, world [][]byte) []util.Cell{
+func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util.Cell{
+	// Prob.: had problems sending a new slice for every alive cells calculated, it was previously appending the new cell slices
+	// to the cell slices it had before.
+	var cellAlive []util.Cell
 
-	var aliveCells []util.Cell
-	var cell util.Cell
-
-	for y := 0; y < p.ImageHeight; y++ {
-		for x := 0; x < p.ImageWidth; x++ {
+	for y := 0; y < imageHeight; y++ {
+		for x := 0; x < imageWidth; x++ {
 			if world[y][x] == 255 {
-				cell.X = x
-				cell.Y = y
-				aliveCells = append(aliveCells, cell)
+				cellAlive = append(cellAlive, util.Cell{X: x, Y: y})
 			}
 		}
 	}
-	return aliveCells
+	return cellAlive
 }
 
 func saveImage(p Params, c distributorChannels, world [][]byte, turn int) {
@@ -76,7 +73,7 @@ func readImage(p Params, c distributorChannels, world [][]byte) [][]byte {
 	return world
 }
 
-var server = flag.String("server","184.72.86.73:8030","IP:port string to connect to as server")
+var server = flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
@@ -98,7 +95,7 @@ func distributor(p Params, c distributorChannels) {
 	defer client.Close()
 
 	done := make(chan bool)
-	mutex := sync.Mutex{}
+
 
 	go func() {
 		ticker := time.NewTicker(2 * time.Second)
@@ -107,9 +104,7 @@ func distributor(p Params, c distributorChannels) {
 			case <-done:
 				return
 			case <-ticker.C:
-				//mutex.Lock()
 				currentTurn, currentAliveCells := makeCellCountCall(client, turn, p.ImageHeight, p.ImageWidth)
-				//mutex.Unlock()
 				// getting the current turn and the # of live cells from the server and passing down to the event channel.
 				c.events <- AliveCellsCount{CompletedTurns: currentTurn, CellsCount: currentAliveCells}
 			default:
@@ -117,23 +112,31 @@ func distributor(p Params, c distributorChannels) {
 		}
 	}()
 
-	mutex.Lock()
-	callWorld := makeCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
-	mutex.Unlock()
+	var callWorld[][]byte
+	if p.Turns == 0 {
+		callWorld = currentWorld
+	} else {
 
-	done <- true
+		callWorld = makeCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
 
-	saveImage(p, c, currentWorld, turn)
+	}
 
-	aliveCell := calculateAliveCells(p, callWorld)
-	// TODO: Report the final state using FinalTurnCompleteEvent.
-	c.events <- FinalTurnComplete{turn, aliveCell}
+	//callAliveCells, callTurns := makeTurnCellCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
 
-	// Make sure that the Io has finished any output before exiting.
-	c.ioCommand <- ioCheckIdle
-	<-c.ioIdle
+		done <- true
 
-	c.events <- StateChange{turn, Quitting}
+		saveImage(p, c, callWorld, p.Turns)
+
+		//aliveCell := calculateAliveCells(p, callWorld)
+		// TODO: Report the final state using FinalTurnCompleteEvent.
+		c.events <- FinalTurnComplete{p.Turns, calculateAliveCells(p.ImageHeight, p.ImageWidth, callWorld)}
+
+		// Make sure that the Io has finished any output before exiting.
+		c.ioCommand <- ioCheckIdle
+		<-c.ioIdle
+
+		c.events <- StateChange{p.Turns, Quitting}
+
 
 	// Close the channel to stop the SDL goroutine gracefully. Removing may cause deadlock.
 	close(c.events)
@@ -147,6 +150,15 @@ func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, ima
 	// response needs to be a pointer to a type when request is just a type itself
 	client.Call(stubs.GameOfLife, request, response)
 	return response.World
+}
+
+func makeTurnCellCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, imageWidth int) ([]util.Cell, int) {
+	request := stubs.Request{World: world, NumberOfTurns: turn, HeightImage: imageHeight, WidthImage: imageWidth}
+	// new() makes a pointer
+	response := new(stubs.Response)
+	// response needs to be a pointer to a type when request is just a type itself
+	client.Call(stubs.GameOfLife, request, response)
+	return response.AliveCells, response.Turn
 }
 
 func makeCellCountCall(client *rpc.Client, currentTurn int, imageHeight int, imageWidth int) (turn int, numberOfAliveCells int) {
