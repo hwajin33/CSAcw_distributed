@@ -14,9 +14,7 @@ import (
 var getTurn int
 var getWorld [][]byte
 var mutex = new(sync.Mutex)
-//var cell util.Cell
 var aliveCells []util.Cell
-//var nextWorld [][]uint8
 
 const alive = 255
 const dead = 0
@@ -81,7 +79,6 @@ func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util
 	return cellAlive
 }
 
-
 // need a method to update the world for a single iteration (similar as the ReverseString())
 // need exported method to access directly from an RPC call -> only by exported methods
 
@@ -107,7 +104,6 @@ func (s *GameOfLifeOperations) ProcessTurns(req stubs.Request, res *stubs.Respon
 		getTurn++
 		mutex.Unlock()
 	}
-	//getTurn = turn
 	mutex.Lock()
 	res.World = getWorld
 	res.AliveCells = aliveCells
@@ -116,19 +112,11 @@ func (s *GameOfLifeOperations) ProcessTurns(req stubs.Request, res *stubs.Respon
 	return
 }
 
-
 func (s *GameOfLifeOperations) ReportAliveCells(req stubs.CellCountRequest, res *stubs.CellCountResponse) (err error) {
 	mutex.Lock()
 	res.Turn = getTurn
 	res.AliveCells = len(calculateAliveCells(len(getWorld), len(getWorld[0]), getWorld))
 	mutex.Unlock()
-	//for getTurn < req.TotalTurns {
-	//	mutex.Lock()
-	//	res.AliveCells = len(calculateAliveCells(len(getWorld), len(getWorld[0]), getWorld))
-	//	res.Turn = getTurn
-	//	mutex.Unlock()
-	//	getTurn++
-	//}
 	return
 }
 

@@ -73,7 +73,7 @@ func readImage(p Params, c distributorChannels, world [][]byte) [][]byte {
 	return world
 }
 
-var server = flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
+var server = flag.String("server","184.72.86.73:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
@@ -83,7 +83,6 @@ func distributor(p Params, c distributorChannels) {
 	for i := range currentWorld {
 		currentWorld[i] = make([]byte, p.ImageWidth)
 	}
-
 
 	// we want all the turns to be processed on the remote node, and we want to get the result back
 	turn := p.Turns
@@ -113,21 +112,16 @@ func distributor(p Params, c distributorChannels) {
 	}()
 
 	var callWorld[][]byte
+
 	if p.Turns == 0 {
 		callWorld = currentWorld
 	} else {
-
 		callWorld = makeCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
-
 	}
-
-	//callAliveCells, callTurns := makeTurnCellCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
-
 		done <- true
 
 		saveImage(p, c, callWorld, p.Turns)
 
-		//aliveCell := calculateAliveCells(p, callWorld)
 		// TODO: Report the final state using FinalTurnCompleteEvent.
 		c.events <- FinalTurnComplete{p.Turns, calculateAliveCells(p.ImageHeight, p.ImageWidth, callWorld)}
 
@@ -150,15 +144,6 @@ func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, ima
 	// response needs to be a pointer to a type when request is just a type itself
 	client.Call(stubs.GameOfLife, request, response)
 	return response.World
-}
-
-func makeTurnCellCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, imageWidth int) ([]util.Cell, int) {
-	request := stubs.Request{World: world, NumberOfTurns: turn, HeightImage: imageHeight, WidthImage: imageWidth}
-	// new() makes a pointer
-	response := new(stubs.Response)
-	// response needs to be a pointer to a type when request is just a type itself
-	client.Call(stubs.GameOfLife, request, response)
-	return response.AliveCells, response.Turn
 }
 
 func makeCellCountCall(client *rpc.Client, currentTurn int, imageHeight int, imageWidth int) (turn int, numberOfAliveCells int) {
