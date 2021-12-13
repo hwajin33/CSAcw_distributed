@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"net/rpc"
+	"sync"
 	"time"
 	"uk.ac.bris.cs/gameoflife/stubs"
 
@@ -22,13 +23,13 @@ type distributorChannels struct {
 	ioInput    <-chan uint8
 }
 
-func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util.Cell {
+func calculateAliveCells(p Params, world [][]byte) []util.Cell{
 
 	var aliveCells []util.Cell
 	var cell util.Cell
 
-	for y := 0; y < imageHeight; y++ {
-		for x := 0; x < imageWidth; x++ {
+	for y := 0; y < p.ImageHeight; y++ {
+		for x := 0; x < p.ImageWidth; x++ {
 			if world[y][x] == 255 {
 				cell.X = x
 				cell.Y = y
@@ -46,12 +47,36 @@ func saveImage(p Params, c distributorChannels, world [][]byte, turn int) {
 	c.ioFilename <- filename
 	for y := 0; y < p.ImageHeight; y++ {
 		for x := 0; x < p.ImageWidth; x++ {
-			c.ioOutput <- world[y][x]
+			if world[y][x] == 255 {
+				c.ioOutput <- 255
+			}else {
+				c.ioOutput <- 0
+			}
 		}
 	}
+	c.events <- ImageOutputComplete{turn, filename}
 }
 
-var server = flag.String("server","54.197.24.249:8091","IP:port string to connect to as server")
+// IO reading image from the Distributor
+func readImage(p Params, c distributorChannels, world [][]byte) [][]byte {
+	filename := fmt.Sprintf("%vx%v", p.ImageWidth, p.ImageHeight)
+
+	c.ioCommand <- ioInput
+	c.ioFilename <- filename
+
+	for y := 0; y < p.ImageHeight; y++ {
+		for x := 0; x < p.ImageWidth; x++ {
+			image := <-c.ioInput
+			world[y][x] = image
+			if image == 255 {
+				c.events <- CellFlipped{0, util.Cell{X: x, Y: y}}
+			}
+		}
+	}
+	return world
+}
+
+var server = flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
@@ -63,43 +88,18 @@ func distributor(p Params, c distributorChannels) {
 	}
 
 
-	filename := fmt.Sprintf("%vx%v", p.ImageWidth, p.ImageHeight)
-
-	c.ioCommand <- ioInput
-	c.ioFilename <- filename
-
-	for y := 0; y < p.ImageHeight; y++ {
-		for x := 0; x < p.ImageWidth; x++ {
-			currentWorld[y][x] = <-c.ioInput
-		}
-	}
-
-	for y := 0; y < p.ImageHeight; y++ {
-		for x := 0; x < p.ImageWidth; x++ {
-			if currentWorld [y][x] == 255 {
-				cell := util.Cell{X: x, Y: y}
-				c.events <- CellFlipped{CompletedTurns: 0, Cell: cell}
-			}
-		}
-	}
-
-
-	// Step 2 - make an RPC call to the server, server gets that request and calculates the alive cells
-	// and reports that to the local
-
 	// we want all the turns to be processed on the remote node, and we want to get the result back
 	turn := p.Turns
 
-	//mutex := new(sync.Mutex)
-	done := make(chan bool)
-	//aliveCells := len(calculateAliveCells(p.ImageHeight, p.ImageWidth, currentWorld))
-	//tickerTurn := 0
+	readImage(p, c, currentWorld)
 
 	flag.Parse()
 	client, _ := rpc.Dial("tcp", *server)
 	defer client.Close()
 
-	// not executing the goroutine
+	done := make(chan bool)
+	mutex := sync.Mutex{}
+
 	go func() {
 		ticker := time.NewTicker(2 * time.Second)
 		for {
@@ -107,7 +107,9 @@ func distributor(p Params, c distributorChannels) {
 			case <-done:
 				return
 			case <-ticker.C:
-				currentTurn, currentAliveCells := makeCellCountCall(client)
+				//mutex.Lock()
+				currentTurn, currentAliveCells := makeCellCountCall(client, turn, p.ImageHeight, p.ImageWidth)
+				//mutex.Unlock()
 				// getting the current turn and the # of live cells from the server and passing down to the event channel.
 				c.events <- AliveCellsCount{CompletedTurns: currentTurn, CellsCount: currentAliveCells}
 			default:
@@ -115,13 +117,17 @@ func distributor(p Params, c distributorChannels) {
 		}
 	}()
 
+	mutex.Lock()
 	callWorld := makeCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
+	mutex.Unlock()
+
 	done <- true
 
 	saveImage(p, c, currentWorld, turn)
 
+	aliveCell := calculateAliveCells(p, callWorld)
 	// TODO: Report the final state using FinalTurnCompleteEvent.
-	c.events <- FinalTurnComplete{turn, calculateAliveCells(p.ImageHeight, p.ImageWidth, callWorld)}
+	c.events <- FinalTurnComplete{turn, aliveCell}
 
 	// Make sure that the Io has finished any output before exiting.
 	c.ioCommand <- ioCheckIdle
@@ -133,7 +139,6 @@ func distributor(p Params, c distributorChannels) {
 	close(c.events)
 }
 
-
 // could add more parameters
 func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, imageWidth int) [][]byte {
 	request := stubs.Request{World: world, NumberOfTurns: turn, HeightImage: imageHeight, WidthImage: imageWidth}
@@ -144,8 +149,8 @@ func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, ima
 	return response.World
 }
 
-func makeCellCountCall(client *rpc.Client) (turn int, numberOfAliveCells int) {
-	request := stubs.CellCountRequest{}
+func makeCellCountCall(client *rpc.Client, currentTurn int, imageHeight int, imageWidth int) (turn int, numberOfAliveCells int) {
+	request := stubs.CellCountRequest{TotalTurns: currentTurn, HeightImage: imageHeight, WidthImage: imageWidth}
 	response := new(stubs.CellCountResponse)
 	client.Call(stubs.CountAliveCells, request, response)
 	return response.Turn, response.AliveCells

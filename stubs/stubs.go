@@ -31,6 +31,7 @@ type Request struct {
 }
 
 type CellCountRequest struct {
+	TotalTurns int
 	HeightImage int
 	WidthImage int
 }
