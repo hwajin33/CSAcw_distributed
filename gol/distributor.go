@@ -76,7 +76,7 @@ func readImage(p Params, c distributorChannels, world [][]byte) [][]byte {
 	return world
 }
 
-var server = flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
+var server = flag.String("server","184.72.86.73:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
 func distributor(p Params, c distributorChannels) {
