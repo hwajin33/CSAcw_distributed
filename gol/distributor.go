@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"net/rpc"
+	"sync"
+	"time"
 	"uk.ac.bris.cs/gameoflife/stubs"
 
 	//"os"
@@ -24,7 +26,6 @@ type distributorChannels struct {
 func calculateAliveCells(p Params, world [][]byte) []util.Cell{
 
 	var aliveCells []util.Cell
-	//aliveCells := []util.Cell{}
 	var cell util.Cell
 
 	for y := 0; y < p.ImageHeight; y++ {
@@ -39,6 +40,42 @@ func calculateAliveCells(p Params, world [][]byte) []util.Cell{
 	return aliveCells
 }
 
+func saveImage(p Params, c distributorChannels, world [][]byte, turn int) {
+	filename := fmt.Sprintf("%vx%vx%d", p.ImageHeight, p.ImageWidth, turn)
+
+	c.ioCommand <- ioOutput
+	c.ioFilename <- filename
+	for y := 0; y < p.ImageHeight; y++ {
+		for x := 0; x < p.ImageWidth; x++ {
+			if world[y][x] == 255 {
+				c.ioOutput <- 255
+			}else {
+				c.ioOutput <- 0
+			}
+		}
+	}
+	c.events <- ImageOutputComplete{turn, filename}
+}
+
+// IO reading image from the Distributor
+func readImage(p Params, c distributorChannels, world [][]byte) [][]byte {
+	filename := fmt.Sprintf("%vx%v", p.ImageWidth, p.ImageHeight)
+
+	c.ioCommand <- ioInput
+	c.ioFilename <- filename
+
+	for y := 0; y < p.ImageHeight; y++ {
+		for x := 0; x < p.ImageWidth; x++ {
+			image := <-c.ioInput
+			world[y][x] = image
+			if image == 255 {
+				c.events <- CellFlipped{0, util.Cell{X: x, Y: y}}
+			}
+		}
+	}
+	return world
+}
+
 var server = flag.String("server","184.72.86.73:8030","IP:port string to connect to as server")
 
 // distributor divides the work between workers and interacts with other goroutines.
@@ -51,32 +88,44 @@ func distributor(p Params, c distributorChannels) {
 	}
 
 
-	filename := fmt.Sprintf("%vx%v", p.ImageWidth, p.ImageHeight)
-
-	c.ioCommand <- ioInput
-	c.ioFilename <- filename
-
-	for y := 0; y < p.ImageHeight; y++ {
-		for x := 0; x < p.ImageWidth; x++ {
-			currentWorld[y][x] = <-c.ioInput
-		}
-	}
-
 	// we want all the turns to be processed on the remote node, and we want to get the result back
 	turn := p.Turns
 
-	//server := flag.String("server","127.0.0.1:8030","IP:port string to connect to as server")
+	readImage(p, c, currentWorld)
+
 	flag.Parse()
 	client, _ := rpc.Dial("tcp", *server)
 	defer client.Close()
 
-	//client, _ := rpc.Dial("tcp","127.0.0.1:8060")
-	////panic(err) <- this not include
-	//defer client.Close()
+	done := make(chan bool)
+	mutex := sync.Mutex{}
 
-	testWorld := makeCall(*client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
+	go func() {
+		ticker := time.NewTicker(2 * time.Second)
+		for {
+			select {
+			case <-done:
+				return
+			case <-ticker.C:
+				//mutex.Lock()
+				currentTurn, currentAliveCells := makeCellCountCall(client, turn, p.ImageHeight, p.ImageWidth)
+				//mutex.Unlock()
+				// getting the current turn and the # of live cells from the server and passing down to the event channel.
+				c.events <- AliveCellsCount{CompletedTurns: currentTurn, CellsCount: currentAliveCells}
+			default:
+			}
+		}
+	}()
 
-	aliveCell := calculateAliveCells(p, testWorld)
+	mutex.Lock()
+	callWorld := makeCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
+	mutex.Unlock()
+
+	done <- true
+
+	saveImage(p, c, currentWorld, turn)
+
+	aliveCell := calculateAliveCells(p, callWorld)
 	// TODO: Report the final state using FinalTurnCompleteEvent.
 	c.events <- FinalTurnComplete{turn, aliveCell}
 
@@ -91,11 +140,18 @@ func distributor(p Params, c distributorChannels) {
 }
 
 // could add more parameters
-func makeCall(client rpc.Client, world [][]byte, turn int, imageHeight int, imageWidth int) [][]byte {
+func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, imageWidth int) [][]byte {
 	request := stubs.Request{World: world, NumberOfTurns: turn, HeightImage: imageHeight, WidthImage: imageWidth}
 	// new() makes a pointer
 	response := new(stubs.Response)
 	// response needs to be a pointer to a type when request is just a type itself
 	client.Call(stubs.GameOfLife, request, response)
 	return response.World
+}
+
+func makeCellCountCall(client *rpc.Client, currentTurn int, imageHeight int, imageWidth int) (turn int, numberOfAliveCells int) {
+	request := stubs.CellCountRequest{TotalTurns: currentTurn, HeightImage: imageHeight, WidthImage: imageWidth}
+	response := new(stubs.CellCountResponse)
+	client.Call(stubs.CountAliveCells, request, response)
+	return response.Turn, response.AliveCells
 }
