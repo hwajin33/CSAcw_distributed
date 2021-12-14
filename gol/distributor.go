@@ -87,6 +87,7 @@ func distributor(p Params, c distributorChannels) {
 	// we want all the turns to be processed on the remote node, and we want to get the result back
 	turn := p.Turns
 
+	// loading the image from the IO
 	readImage(p, c, currentWorld)
 
 	flag.Parse()
@@ -103,8 +104,9 @@ func distributor(p Params, c distributorChannels) {
 			case <-done:
 				return
 			case <-ticker.C:
-				currentTurn, currentAliveCells := makeCellCountCall(client, turn, p.ImageHeight, p.ImageWidth)
+				// calling to the server and receive its return values in each currentTurn & currentAliveCells
 				// getting the current turn and the # of live cells from the server and passing down to the event channel.
+				currentTurn, currentAliveCells := makeCellCountCall(client, turn, p.ImageHeight, p.ImageWidth)
 				c.events <- AliveCellsCount{CompletedTurns: currentTurn, CellsCount: currentAliveCells}
 			default:
 			}
@@ -113,13 +115,17 @@ func distributor(p Params, c distributorChannels) {
 
 	var callWorld[][]byte
 
+	// if the turn is 0, no need to all the server (no RPC)
 	if p.Turns == 0 {
+		// lett the world to just ve the current world (no changes)
 		callWorld = currentWorld
 	} else {
+		// making a call to the server
 		callWorld = makeCall(client, currentWorld, turn, p.ImageHeight, p.ImageWidth)
 	}
 		done <- true
 
+		// outputting the image to the IO (saving it)
 		saveImage(p, c, callWorld, p.Turns)
 
 		// TODO: Report the final state using FinalTurnCompleteEvent.
@@ -136,7 +142,7 @@ func distributor(p Params, c distributorChannels) {
 	close(c.events)
 }
 
-// could add more parameters
+// calling to the server to process the GOL on the requested world and receive it in the end
 func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, imageWidth int) [][]byte {
 	request := stubs.Request{World: world, NumberOfTurns: turn, HeightImage: imageHeight, WidthImage: imageWidth}
 	// new() makes a pointer
@@ -146,6 +152,7 @@ func makeCall(client *rpc.Client, world [][]byte, turn int, imageHeight int, ima
 	return response.World
 }
 
+// making a call to the server to get a response of the number of alive cells and its turns
 func makeCellCountCall(client *rpc.Client, currentTurn int, imageHeight int, imageWidth int) (turn int, numberOfAliveCells int) {
 	request := stubs.CellCountRequest{TotalTurns: currentTurn, HeightImage: imageHeight, WidthImage: imageWidth}
 	response := new(stubs.CellCountResponse)

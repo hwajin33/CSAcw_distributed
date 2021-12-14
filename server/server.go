@@ -87,24 +87,26 @@ func calculateAliveCells(imageHeight int, imageWidth int, world [][]byte) []util
 type GameOfLifeOperations struct {}
 
 
-// ProcessTurns MakeGameOfLife Reverse have a for loop inside that iterates over the # of iterations specified in the Request struct
-// at the end return by the Response pointer
+// ProcessTurns processing the GOL on the requested world from the client and returning the processed values as response pointer in the end
 func (s *GameOfLifeOperations) ProcessTurns(req stubs.Request, res *stubs.Response) (err error) {
 	// have a for loop that iterates over the # of iterations specified in the Request struct
-	// at the end returned by the Response pointer
 	mutex.Lock()
+	// let the global variables to have the value of the requested values
 	getWorld = req.World
 	//aliveCells = req.AliveCells
 	getTurn = req.Turns
 	mutex.Unlock()
+	// iterates over the # of iterations specified in the Request struct
 	for getTurn < req.NumberOfTurns {
 		mutex.Lock()
+		// calculating and updating the requested world
 		getWorld = calculateNextState(req.HeightImage, req.WidthImage, getWorld)
 		//aliveCells = calculateAliveCells(req.HeightImage, req.WidthImage, getWorld)
 		getTurn++
 		mutex.Unlock()
 	}
 	mutex.Lock()
+	// letting the response values to have the processed values & responses are return as a pointer
 	res.World = getWorld
 	//res.AliveCells = aliveCells
 	res.Turn = getTurn
@@ -112,9 +114,13 @@ func (s *GameOfLifeOperations) ProcessTurns(req stubs.Request, res *stubs.Respon
 	return
 }
 
+// ReportAliveCells reporting the number of alive cells with its turns
 func (s *GameOfLifeOperations) ReportAliveCells(req stubs.CellCountRequest, res *stubs.CellCountResponse) (err error) {
 	mutex.Lock()
 	res.Turn = getTurn
+	// letting the response value to have the number of alive cells
+	// height: just the length of the world
+	// width: just the horizontal length of the fist vector
 	res.AliveCells = len(calculateAliveCells(len(getWorld), len(getWorld[0]), getWorld))
 	mutex.Unlock()
 	return
